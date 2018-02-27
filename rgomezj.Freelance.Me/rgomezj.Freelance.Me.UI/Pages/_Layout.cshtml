@@ -1,0 +1,818 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - rgomezj.Freelance.Me.UI</title>
+    
+    <link rel="icon" type="image/png" href="~/template/assets/img/favicon.png" />
+
+    <!-- Bootstrap -->
+    <link href="~/template/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="~/template/assets/plugins/OwlCarousel2-2.2.0/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/template/assets/plugins/OwlCarousel2-2.2.0/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="~/template/assets/plugins/animate.css" rel="stylesheet">
+    <link href="~/template/assets/plugins/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="~/template/assets/plugins/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- default styles -->
+    <link href="~/template/assets/css/default.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,300i,400,400i,500,600,700" rel="stylesheet">
+
+    <!-- Page loader animation -->
+    <style type="text/css">
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999999;
+            background: url(/template/assets/img/loader.svg) center no-repeat #fff;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- pre loader -->
+    <div class="se-pre-con"></div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top nav-expanded">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    @*<img src="/template/assets/img/logo.png" class="img-responsive" alt="brand logo">*@
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="scrollto" href="#home">Home</a></li>
+                    <li><a class="scrollto" href="#about">About</a></li>
+                    @*<li><a class="scrollto" href="#process">Process</a></li>*@
+                    <li><a class="scrollto" href="#works">Works</a></li>
+                    <li><a class="scrollto" href="#clients">Clients</a></li>
+                    @*<li><a class="scrollto" href="#pricing">Pricing</a></li>*@
+                    <li><a class="scrollto" href="#contact">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- header -->
+    <div class="header" id="home" style="background-image: url('/template/assets/img/header.jpg');">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Roger Gomez - Software Developer</h1>
+                        <span class="line"></span>
+                        <p>
+                            Enjoying day to day challenges
+                        </p>
+                        <a href="#" class="btn btn-primary">Check it out :)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down hidden-xs">
+            <div class='icon-scroll'></div>
+        </div>
+    </div>
+
+    <!-- features -->
+    <div class="section section-features" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Detail Oriented, Resourceful, Fast Learner</h2>
+                    <p>We have brought a slylish bootstrap template to amaze you. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="200ms">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="~/template/assets/img/icons/network.png" alt="responsive">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Resourceful</h4>
+                                <p>
+                                    Even though I have my preferences in technology. I have used a wide variety of technologies/tools to meet business needs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="400ms">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="~/template/assets/img/icons/optimization-clock.png" alt="clock">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Fast Learner</h4>
+                                <p>
+                                    As technology evolves, adapting to changes and learning quickly allows me to bring solutions to reality
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="600ms">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="~/template/assets/img/icons/settings.png" alt="settings">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Configuration Management</h4>
+                                <p>
+                                    Not only involved in Development activities but in deployments and configuration management for the solutions delivered
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="800ms">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="~/template/assets/img/icons/monitoring.png" alt="monitoring">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Detail Oriented</h4>
+                                <p>
+                                    Not just coding, I understand sometimes solutions go beyond the code itself, so paying special attention to requirements and proposing different ways to do things (which may or not involve code)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="1000ms">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="~/template/assets/img/icons/operator.png" alt="operator">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Communication</h4>
+                                <p>
+                                    Good communication skills, meeting with clients for management of the projects or production support. Providing technical and functional training
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="1200ms">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="~/template/assets/img/icons/like.png" alt="heart">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Work with love</h4>
+                                <p>
+                                    I enjoy what I do, being a software developer and bringing solutions through the knowledge I have gained, is one of my passions 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.section -->
+    <!-- numbers -->
+    <div class="section section-numbers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="number-box text-center">
+                        <h3><span class="counter">10</span>+</h3>
+                        <p>Years working in Software Development</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="number-box text-center">
+                        <h3><span class="counter">3</span>+</h3>
+                        <p>Years as Technical Lead</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="number-box text-center">
+                        <h3><span class="counter">2</span>+</h3>
+                        <p>Clients as Freelance</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="number-box text-center no-border">
+                        <h3><span class="counter">10</span>+</h3>
+                        <p>Dynamics CRM Projects Delivered</p>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div>
+    </div>
+
+    <!-- team -->
+    <div class="section section-team">
+        <div class="container">
+            <div class="row">
+                <div class="skills">
+                    <ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInLeft animated" style="visibility: visible;">
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                C#
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                ASP.Net
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 80%;">
+                                HTML/CSS
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 80%;">
+                                Javascript
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                SQL Server (Transact SQL)
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 85%;">
+                                Oracle (PL/SQL) 85
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="20" style="width: 30%;">
+                                .Net Core - Learning.......
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="80" style="width: 30%;">
+                                React JS - Learning.......
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="80" style="width: 30%;">
+                                Azure - Learning.......
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight animated" style="visibility: visible;">
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                Microsoft Dynamics CRM
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 80%;">
+                                Patterns and Practices
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 80%;">
+                                Requirements Gathering
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                Software Design
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                Problem Solving
+                            </div>
+                        </li>
+                        <li class="progress" style="opacity: 1; left: 0px;">
+                            <div class="progress-bar" data-width="85" style="width: 90%;">
+                                Team Leadership
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- /.section -->
+    <!-- process -->
+    <div class="section section-process" id="process" data-parallax="scroll" data-image-src="/template/assets/img/process-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center wow fadeIn" data-wow-delay="200ms">
+                    <h2>How we do it</h2>
+                    <p>Steps we follow to make your dream reality</p>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills" role="tablist">
+                        <li role="presentation" class="active"><a href="#plan" aria-controls="plan" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Plan</a></li>
+                        <li role="presentation"><a href="#create" aria-controls="create" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Create</a></li>
+                        <li role="presentation"><a href="#test" aria-controls="test" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Test</a></li>
+                        <li role="presentation"><a href="#launch" aria-controls="launch" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Launch</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active fade in" id="plan">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade " id="create">
+                            <p>
+                                Wallem loty porem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade " id="test">
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade " id="launch">
+                            <p>
+                                Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-8 -->
+            </div>
+        </div>
+    </div><!-- /.section -->
+    <!-- works -->
+    <div class="section section-works" id="works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Works we have done</h2>
+                    <p>Some of our best works. Have a look!</p>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="work wow fadeInUp" data-wow-delay="200ms">
+                        <a class="gallery-work" href="~/template/assets/img/works/1-lg.jpg">
+                            <img src="~/template/assets/img/works/1.jpg" class="img-responsive" alt="ceedee">
+                            <div class="details">
+                                <h4>Ceedee Solutions</h4>
+                                <p>Brand Identity</p>
+                            </div><!-- details -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="work wow fadeInUp" data-wow-delay="400ms">
+                        <a class="gallery-work" href="~/template/assets/img/works/2-lg.jpg">
+                            <img src="~/template/assets/img/works/2.jpg" class="img-responsive" alt="elemeno">
+                            <div class="details">
+                                <h4>Elemeno Inc</h4>
+                                <p>Web Design, Brand Identity</p>
+                            </div><!-- details -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="work wow fadeInUp" data-wow-delay="600ms">
+                        <a class="gallery-work" href="~/template/assets/img/works/3-lg.jpg">
+                            <img src="~/template/assets/img/works/3.jpg" class="img-responsive" alt="afgee">
+                            <div class="details">
+                                <h4>Afgee Eich Services</h4>
+                                <p>Graphics, Brand Identity</p>
+                            </div><!-- details -->
+                        </a>
+                    </div><!-- work -->
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="work wow fadeInUp" data-wow-delay="800ms">
+                        <a class="gallery-work" href="~/template/assets/img/works/4-lg.jpg">
+                            <img src="~/template/assets/img/works/4.jpg" class="img-responsive" alt="ceedee">
+                            <div class="details">
+                                <h4>Ceedee Solutions</h4>
+                                <p>Brand Identity</p>
+                            </div><!-- details -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="work wow fadeInUp" data-wow-delay="1000ms">
+                        <a class="gallery-work" href="~/template/assets/img/works/5-lg.jpg">
+                            <img src="~/template/assets/img/works/5.jpg" class="img-responsive" alt="elemeno">
+                            <div class="details">
+                                <h4>Elemeno Inc</h4>
+                                <p>Web Design, Brand Identity</p>
+                            </div><!-- details -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="work wow fadeInUp" data-wow-delay="1200ms">
+                        <a class="gallery-work" href="~/template/assets/img/works/6-lg.jpg">
+                            <img src="~/template/assets/img/works/6.jpg" class="img-responsive" alt="afgee">
+                            <div class="details">
+                                <h4>Afgee Eich Services</h4>
+                                <p>Graphics, Brand Identity</p>
+                            </div><!-- details -->
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- /.section -->
+    <!-- testimonial -->
+    <div class="section section-testimonial" id="clients" data-parallax="scroll" data-image-src="/template/assets/img/client-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center wow fadeInUp" data-wow-delay="400ms">
+                    <h2>References</h2>
+                    <p>See opinions from clients and co-workers.</p>
+                    <div class="testimonials owl-carousel owl-theme" id="testimonials">
+
+                        <div class="textimonial-box item">
+                            <div class="client">
+                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/1.jpg);"></div>
+                                <h4>Giovanny Alzate</h4>
+                                <p>UruIT</p>
+                            </div>
+                            <div class="testimonial-content">
+                               Nothing to say yet
+                            </div>
+                        </div><!-- /.testimonial-box -->
+
+                        <div class="textimonial-box item">
+                            <div class="client">
+                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/2.jpg);"></div>
+                                <h4>Juan David Lara</h4>
+                                <p>Globant</p>
+                            </div>
+                            <div class="testimonial-content">
+                                Pending
+                            </div>
+                        </div>
+
+                        <div class="textimonial-box item">
+                            <div class="client">
+                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/1.jpg);"></div>
+                                <h4>Frank Wyton</h4>
+                                <p>www.wyware.com</p>
+                            </div>
+                            <div class="testimonial-content">
+                                Nothing to say yet
+                            </div>
+                        </div><!-- /.testimonial-box -->
+
+                        <div class="textimonial-box item">
+                            <div class="client">
+                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/2.jpg);"></div>
+                                <h4>Salim Adamon</h4>
+                                <p>https://www.sadax-technology.com</p>
+                            </div>
+                            <div class="testimonial-content">
+                                Pending
+                            </div>
+                        </div>
+
+                        <!-- /.testimonial-box -->
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div>
+
+    <!-- logos -->
+    <div class="section section-client-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="client-logo text-center owl-carousel owl-theme" id="client-logos">
+                        <img src="~/template/assets/img/client-logo/1.jpg" class="img-responsive item" alt="client logo 1">
+                        <img src="~/template/assets/img/client-logo/2.jpg" class="img-responsive item" alt="client logo 2">
+                        <img src="~/template/assets/img/client-logo/3.jpg" class="img-responsive item" alt="client logo 3">
+                        <img src="~/template/assets/img/client-logo/4.jpg" class="img-responsive item" alt="client logo 4">
+                        <img src="~/template/assets/img/client-logo/5.jpg" class="img-responsive item" alt="client logo 5">
+                        <img src="~/template/assets/img/client-logo/6.jpg" class="img-responsive item" alt="client logo 6">
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div>
+    </div>
+
+    <!-- pricing -->
+    @*<div class="section section-pricing" id="pricing" data-parallax="scroll" data-image-src="/template/assets/img/price-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Our Pricing</h2>
+                    <p>Our packages are build for every type of customers. Easy &amp; Affordable.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pricing text-center wow fadeIn" data-wow-delay="200ms">
+                        <div class="pricing-name">
+                            <h3>Personal</h3>
+                            <div class="price">
+                                <span class="number">
+                                    <sup>$</sup>16
+                                </span>
+                                per month
+                            </div>
+                        </div>
+                        <div class="price-content">
+                            <ul class="price-features">
+                                <li>15 Users</li>
+                                <li>30 Days Access</li>
+                                <li>Special Content</li>
+                                <li>No hidden fees</li>
+                                <li>5GB Downloads</li>
+                                <li>24x7 Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block">Sign up</a>
+                        </div><!-- /.price-content -->
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="pricing text-center wow fadeIn" data-wow-delay="500ms">
+                        <div class="pricing-name">
+                            <h3>Professional</h3>
+                            <div class="price">
+                                <span class="number">
+                                    <sup>$</sup>30
+                                </span>
+                                per month
+                            </div>
+                            <div class="sale-box">
+                                <span class="on_sale title_shop">Popular</span>
+                            </div>
+                        </div>
+                        <div class="price-content">
+                            <ul class="price-features">
+                                <li>25 Users</li>
+                                <li>Unlimited Access</li>
+                                <li>Special Content</li>
+                                <li>No hidden fees</li>
+                                <li>Free Downloads</li>
+                                <li>24x7 Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block">Sign up</a>
+                        </div><!-- /.price-content -->
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="pricing text-center wow fadeIn" data-wow-delay="800ms">
+                        <div class="pricing-name">
+                            <h3>Business</h3>
+                            <div class="price">
+                                <span class="number">
+                                    <sup>$</sup>50
+                                </span>
+                                per month
+                            </div>
+                        </div>
+                        <div class="price-content">
+                            <ul class="price-features">
+                                <li>50 Users</li>
+                                <li>Unlimited Access</li>
+                                <li>Special Content</li>
+                                <li>No hidden fees</li>
+                                <li>Free Downloads</li>
+                                <li>24x7 Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block">Sign up</a>
+                        </div><!-- /.price-content -->
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+            </div>
+        </div>
+    </div>*@
+    <!-- /.section -->
+    <!-- contact -->
+    <div class="section section-contact no-margin-bottom" id="contact" style="background-image:url('/template/assets/img/contact-bg.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 wow fadeIn" data-wow-delay="200ms">
+                    <h2>Say Hello</h2>
+                    <p>Reach out to me anytime and I will happily answer your questions.</p>
+
+                    <!-- showing contact form sent status -->
+                    <div id="submitMessage"></div>
+
+                    <form class="contact-form" id="contact-form" method="post" action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Your name :</label>
+                                    <input type="text" class="form-control" id="conName" name="name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Your email :</label>
+                                    <input type="text" class="form-control" id="conEmail" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone number :</label>
+                                    <input type="text" class="form-control" id="conPhone" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="subject">Subject :</label>
+                                    <input type="text" class="form-control" id="conSubject" name="subject">
+                                </div>
+                            </div>
+                        </div><!-- /.row -->
+                        <div class="form-group">
+                            <label for="email">Your message :</label>
+                            <textarea class="form-control" id="conMessage" name="message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" id="contact-form-submit" name="submit" value="Send Message" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6 contact-address text-center">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-4 wow fadeInUp" data-wow-delay="500ms">
+                            <img class="icon" src="~/template/assets/img/icons/phone-call.png" alt="phone call">
+                            <h4>Contact Me</h4>
+                            <p>
+                                +57 3006318287<br>
+                                rogergomez780@gmail.com
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-4 wow fadeInUp" data-wow-delay="800ms">
+                            <img class="icon" src="~/template/assets/img/icons/placeholder.png" alt="placeholder">
+                            <h4>Location</h4>
+                            <p>
+                                Medellin, Antioquia<br>
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-sm-4 wow fadeInUp" data-wow-delay="1200ms">
+                            <img class="icon" src="~/template/assets/img/icons/network.png" alt="network">
+                            <h4>On Social Media</h4>
+                            <ul class="list-inline list-social">
+                                <li><a href="https://www.facebook.com/rogergomez780" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/roger-gomez-jaramillo-45236b19" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                @*<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>*@
+                                <li><a href="https://www.github.com/rgomezj" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.upwork.com/freelancers/~01cf02d33ccbefd80b" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-6 -->
+            </div>
+        </div>
+    </div><!-- /.section -->
+    <!-- map -->
+    <div class="section section-map no-margin-bottom no-margin-top" id="map">
+    </div><!-- /.section -->
+    <script>
+        function initMap() {
+            var uluru = { lat: 6.237129, lng: -75.556054 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                scrollwheel: false,
+                zoom: 16,
+                center: uluru,
+                styles: [{ "featureType": "all", "elementType": "all", "stylers": [{ "hue": "#e7ecf0" }] }, { "featureType": "administrative.locality", "elementType": "all", "stylers": [{ "lightness": "6" }, { "color": "#4a148c" }, { "weight": "0.01" }, { "gamma": "1" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "hue": "#7300ff" }] }, { "featureType": "road", "elementType": "labels.text", "stylers": [{ "color": "#4a148c" }, { "weight": "0.01" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "visibility": "simplified" }, { "saturation": "-45" }, { "color": "#4a148c" }, { "lightness": "57" }] }]
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDryG820sn6a0ptMga9C_qFjHejm1LSv2k&callback=initMap">
+    </script>
+    <!-- Maps Section Ends Here-->
+    <!-- subscribe -->
+    <div class="section section-newsletter no-margin-bottom no-margin-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="300ms">
+                    <h2>Sign up for Newsletter</h2>
+                    <p>We'll send email notifications everytime we release new Theme.</p>
+                </div>
+                <div class="col-lg-6 col-md-5 wow fadeIn" data-wow-delay="600ms">
+                    <form id="subscribe-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" name="email">
+                            <span class="input-group-btn">
+                                <input type="submit" name="submit" value="Go!" class="btn btn-primary">
+                            </span>
+                        </div><!-- /input-group -->
+                        <div class="error-msg"></div>
+                    </form>
+                </div>
+            </div><!-- row -->
+        </div>
+    </div><!-- /.section -->
+    <!-- copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2017 - Indiom Bootstrap Theme by <a href="http://www.webmaddy.com" target="_blank">Webmaddy Web Studio</a>
+                </div>
+            </div>
+        </div>
+    </div><!--/.copyright -->
+    <!-- back to top -->
+    <a href="#" id="back-to-top" class="show">
+        <img src="~/template/assets/img/top-icon.png" alt="top arrow">
+    </a>
+    @RenderBody()
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/template/assets/plugins/jquery-2.2.4.min.js"></script>
+    <script src="~/template/assets/plugins/jquery.easing.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/template/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="~/template/assets/plugins/OwlCarousel2-2.2.0/dist/owl.carousel.min.js"></script>
+    <script src="~/template/assets/plugins/WOW/dist/wow.min.js"></script>
+    <script src="~/template/assets/plugins/waypoints.min.js"></script>
+    <script src="~/template/assets/plugins/Counter-Up-master/jquery.counterup.min.js"></script>
+    <script src="~/template/assets/plugins/parallax.js-1.4.2/parallax.min.js"></script>
+    <script src="~/template/assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="~/template/assets/plugins/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
+    <script src="~/template/assets/plugins/sscr.js"></script>
+    <script src="~/template/mail/contact.js"></script>
+    <script src="~/template/assets/js/default.js"></script>
+</body>
+</html>
