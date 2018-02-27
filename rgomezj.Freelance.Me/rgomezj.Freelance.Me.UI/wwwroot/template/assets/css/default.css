@@ -684,6 +684,7 @@ label.error {
 .section-testimonial {
   padding-top: 80px;
   padding-bottom: 80px;
+  color:black;
 }
 .textimonial-box .testimonial-content {
   font-style: italic;
