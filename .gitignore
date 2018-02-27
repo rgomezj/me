@@ -18,6 +18,7 @@ TestResults
 [Rr]elease/
 PublishProfiles/
 .vs/
+v15/
 x64/
 *_i.c
 *_p.c
