@@ -17,7 +17,7 @@
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="App_Data\rgomez.Freelance.me.json">
+    <Content Update="App_Data\me\GeneralInfo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

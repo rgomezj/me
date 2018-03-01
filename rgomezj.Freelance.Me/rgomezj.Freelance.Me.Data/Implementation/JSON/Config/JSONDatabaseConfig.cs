@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using rgomezj.Freelance.Me.Core;
+﻿using rgomezj.Freelance.Me.Core;
 using rgomezj.Freelance.Me.Data.Abstract;
 using System;
 using System.Collections.Generic;

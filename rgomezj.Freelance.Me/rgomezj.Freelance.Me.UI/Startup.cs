@@ -16,16 +16,17 @@ namespace rgomezj.Freelance.Me.UI
 {
     public class Startup
     {
-     
+
+        IHostingEnvironment _environment;
 
         public Startup(IHostingEnvironment env)
         {
             // Set up configuration sources.
-            var filePath = env.ContentRootPath  + Path.DirectorySeparatorChar.ToString() + "App_Data" + Path.DirectorySeparatorChar.ToString() + "rgomez.Freelance.me.json";
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            _environment = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -35,7 +36,9 @@ namespace rgomezj.Freelance.Me.UI
         {
             services.AddMvc();
             services.AddOptions();
-            services.AddTransient<IGeneralInfoRepository>(s => new JSONGeneralInfoRepository(Configuration.GetSection("JSONDatabase").Get<JSONDatabaseConfig>()));
+            var JSONDatabaseConfiguration = Configuration.GetSection("JSONDatabase").Get<JSONDatabaseConfig>();
+            JSONDatabaseConfiguration.BasePath = _environment.ContentRootPath + Path.DirectorySeparatorChar.ToString() + "App_Data" + Path.DirectorySeparatorChar.ToString() + "me" + Path.DirectorySeparatorChar.ToString();
+            services.AddTransient<IGeneralInfoRepository>(s => new JSONGeneralInfoRepository(JSONDatabaseConfiguration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
