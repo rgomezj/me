@@ -1,11 +1,4 @@
 ﻿{
-  "Logging": {
-    "IncludeScopes": false,
-    "LogLevel": {
-      "Default": "Warning"
-    }
-  },
-
   "JSONDatabase": {
     "BasePath": "C://temp/rgomez.Freelance.me",
     "Files": {

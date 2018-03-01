@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Roger Gomez</title>
-    
+
     <link rel="icon" type="image/png" href="~/template/assets/img/favicon.png" />
 
     <!-- Bootstrap -->
@@ -47,6 +47,7 @@
     </style>
 
 </head>
+@model IndexModel
 <body>
 
     <!-- pre loader -->
@@ -93,7 +94,7 @@
                         <h1>Roger Gomez - Software Developer</h1>
                         <span class="line"></span>
                         <p>
-                            
+
                         </p>
                         <a href="#" class="btn btn-primary">Check it out :)</a>
                     </div>
@@ -223,7 +224,7 @@
                             <div class="media-body">
                                 <h4 class="media-heading">Work with love</h4>
                                 <p>
-                                    I enjoy what I do, being a software developer and bringing solutions through the knowledge I have gained, is one of my passions 
+                                    I enjoy what I do, being a software developer and bringing solutions through the knowledge I have gained, is one of my passions
                                 </p>
                             </div>
                         </div>
@@ -238,25 +239,25 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="number-box text-center">
-                        <h3><span class="counter">10</span>+</h3>
+                        <h3><span class="counter">@Model.GeneralInfo.YearsWorkingSoftware</span>+</h3>
                         <p>Years working in Software Development</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="number-box text-center">
-                        <h3><span class="counter">3</span>+</h3>
+                        <h3><span class="counter">@Model.GeneralInfo.YearsTechnicalLead</span>+</h3>
                         <p>Years as Technical Lead</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="number-box text-center">
-                        <h3><span class="counter">2</span>+</h3>
+                        <h3><span class="counter">@Model.GeneralInfo.ClientsFreelanceCount</span>+</h3>
                         <p>Clients as Freelance</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="number-box text-center no-border">
-                        <h3><span class="counter">10</span>+</h3>
+                        <h3><span class="counter">@Model.GeneralInfo.DynamicsCRMProjectsDelivered</span>+</h3>
                         <p>Dynamics CRM Projects Delivered</p>
                     </div>
                 </div>
@@ -347,7 +348,7 @@
                                 Team Leadership
                             </div>
                         </li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -355,61 +356,61 @@
     </div><!-- /.section -->
     <!-- process -->
     @*<div class="section section-process" id="process" data-parallax="scroll" data-image-src="/template/assets/img/process-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center wow fadeIn" data-wow-delay="200ms">
-                    <h2>How we do it</h2>
-                    <p>Steps we follow to make your dream reality</p>
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-pills" role="tablist">
-                        <li role="presentation" class="active"><a href="#plan" aria-controls="plan" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Plan</a></li>
-                        <li role="presentation"><a href="#create" aria-controls="create" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Create</a></li>
-                        <li role="presentation"><a href="#test" aria-controls="test" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Test</a></li>
-                        <li role="presentation"><a href="#launch" aria-controls="launch" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Launch</a></li>
-                    </ul>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active fade in" id="plan">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
-                            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center wow fadeIn" data-wow-delay="200ms">
+                        <h2>How we do it</h2>
+                        <p>Steps we follow to make your dream reality</p>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="active"><a href="#plan" aria-controls="plan" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Plan</a></li>
+                            <li role="presentation"><a href="#create" aria-controls="create" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Create</a></li>
+                            <li role="presentation"><a href="#test" aria-controls="test" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Test</a></li>
+                            <li role="presentation"><a href="#launch" aria-controls="launch" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Launch</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active fade in" id="plan">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur.
+                                </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade " id="create">
+                                <p>
+                                    Wallem loty porem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur.
+                                </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade " id="test">
+                                <p>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.
+                                </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade " id="launch">
+                                <p>
+                                    Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur.
+                                </p>
+                            </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade " id="create">
-                            <p>
-                                Wallem loty porem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade " id="test">
-                            <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade " id="launch">
-                            <p>
-                                Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-8 -->
+                    </div><!-- /.col-md-8 -->
+                </div>
             </div>
-        </div>
-    </div>*@
+        </div>*@
     <!-- /.section -->
     <!-- works -->
     <div class="section section-works" id="works">
@@ -522,7 +523,7 @@
                                 <p style="font-weight:bold">www.wyware.com</p>
                             </div>
                             <div class="testimonial-content">
-                                Nothing to say yet
+                                Pending
                             </div>
                         </div><!-- /.testimonial-box -->
 
@@ -533,7 +534,7 @@
                                 <p style="font-weight:bold">https://www.sadax-technology.com</p>
                             </div>
                             <div class="testimonial-content">
-                                Pending
+                                I have been extremely please by my experience working with Roger. Not only does he have very strong technical skills with Dynamics CRM and related development technologies, he also has the ability learn new tools and features and become proficient in no time. His understanding of business needs allowed us to delegate work to him with confidence that the necessary thought process would be applied when building application features. My team really enjoys working with him.
                             </div>
                         </div>
 
@@ -565,144 +566,144 @@
 
     <!-- pricing -->
     @*<div class="section section-pricing" id="pricing" data-parallax="scroll" data-image-src="/template/assets/img/price-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Our Pricing</h2>
-                    <p>Our packages are build for every type of customers. Easy &amp; Affordable.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Our Pricing</h2>
+                        <p>Our packages are build for every type of customers. Easy &amp; Affordable.</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pricing text-center wow fadeIn" data-wow-delay="200ms">
+                            <div class="pricing-name">
+                                <h3>Personal</h3>
+                                <div class="price">
+                                    <span class="number">
+                                        <sup>$</sup>16
+                                    </span>
+                                    per month
+                                </div>
+                            </div>
+                            <div class="price-content">
+                                <ul class="price-features">
+                                    <li>15 Users</li>
+                                    <li>30 Days Access</li>
+                                    <li>Special Content</li>
+                                    <li>No hidden fees</li>
+                                    <li>5GB Downloads</li>
+                                    <li>24x7 Support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-block">Sign up</a>
+                            </div><!-- /.price-content -->
+                        </div>
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-md-4">
+                        <div class="pricing text-center wow fadeIn" data-wow-delay="500ms">
+                            <div class="pricing-name">
+                                <h3>Professional</h3>
+                                <div class="price">
+                                    <span class="number">
+                                        <sup>$</sup>30
+                                    </span>
+                                    per month
+                                </div>
+                                <div class="sale-box">
+                                    <span class="on_sale title_shop">Popular</span>
+                                </div>
+                            </div>
+                            <div class="price-content">
+                                <ul class="price-features">
+                                    <li>25 Users</li>
+                                    <li>Unlimited Access</li>
+                                    <li>Special Content</li>
+                                    <li>No hidden fees</li>
+                                    <li>Free Downloads</li>
+                                    <li>24x7 Support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-block">Sign up</a>
+                            </div><!-- /.price-content -->
+                        </div>
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-md-4">
+                        <div class="pricing text-center wow fadeIn" data-wow-delay="800ms">
+                            <div class="pricing-name">
+                                <h3>Business</h3>
+                                <div class="price">
+                                    <span class="number">
+                                        <sup>$</sup>50
+                                    </span>
+                                    per month
+                                </div>
+                            </div>
+                            <div class="price-content">
+                                <ul class="price-features">
+                                    <li>50 Users</li>
+                                    <li>Unlimited Access</li>
+                                    <li>Special Content</li>
+                                    <li>No hidden fees</li>
+                                    <li>Free Downloads</li>
+                                    <li>24x7 Support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-block">Sign up</a>
+                            </div><!-- /.price-content -->
+                        </div>
+                    </div><!-- /.col-md-4 -->
+
                 </div>
-
-                <div class="col-md-4">
-                    <div class="pricing text-center wow fadeIn" data-wow-delay="200ms">
-                        <div class="pricing-name">
-                            <h3>Personal</h3>
-                            <div class="price">
-                                <span class="number">
-                                    <sup>$</sup>16
-                                </span>
-                                per month
-                            </div>
-                        </div>
-                        <div class="price-content">
-                            <ul class="price-features">
-                                <li>15 Users</li>
-                                <li>30 Days Access</li>
-                                <li>Special Content</li>
-                                <li>No hidden fees</li>
-                                <li>5GB Downloads</li>
-                                <li>24x7 Support</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary btn-block">Sign up</a>
-                        </div><!-- /.price-content -->
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4">
-                    <div class="pricing text-center wow fadeIn" data-wow-delay="500ms">
-                        <div class="pricing-name">
-                            <h3>Professional</h3>
-                            <div class="price">
-                                <span class="number">
-                                    <sup>$</sup>30
-                                </span>
-                                per month
-                            </div>
-                            <div class="sale-box">
-                                <span class="on_sale title_shop">Popular</span>
-                            </div>
-                        </div>
-                        <div class="price-content">
-                            <ul class="price-features">
-                                <li>25 Users</li>
-                                <li>Unlimited Access</li>
-                                <li>Special Content</li>
-                                <li>No hidden fees</li>
-                                <li>Free Downloads</li>
-                                <li>24x7 Support</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary btn-block">Sign up</a>
-                        </div><!-- /.price-content -->
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4">
-                    <div class="pricing text-center wow fadeIn" data-wow-delay="800ms">
-                        <div class="pricing-name">
-                            <h3>Business</h3>
-                            <div class="price">
-                                <span class="number">
-                                    <sup>$</sup>50
-                                </span>
-                                per month
-                            </div>
-                        </div>
-                        <div class="price-content">
-                            <ul class="price-features">
-                                <li>50 Users</li>
-                                <li>Unlimited Access</li>
-                                <li>Special Content</li>
-                                <li>No hidden fees</li>
-                                <li>Free Downloads</li>
-                                <li>24x7 Support</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary btn-block">Sign up</a>
-                        </div><!-- /.price-content -->
-                    </div>
-                </div><!-- /.col-md-4 -->
-
             </div>
-        </div>
-    </div>*@
+        </div>*@
     <!-- /.section -->
     <!-- contact -->
     <div class="section section-contact no-margin-bottom" id="contact" style="background-image:url('/template/assets/img/contact-bg.png');">
         <div class="container">
             <div class="row">
                 @*<div class="col-md-6 wow fadeIn" data-wow-delay="200ms">
-                    <h2>Say Hello</h2>
-                    <p>Reach out to me anytime and I will happily answer your questions.</p>
+                        <h2>Say Hello</h2>
+                        <p>Reach out to me anytime and I will happily answer your questions.</p>
 
-                    <!-- showing contact form sent status -->
-                    <div id="submitMessage"></div>
+                        <!-- showing contact form sent status -->
+                        <div id="submitMessage"></div>
 
-                    <form class="contact-form" id="contact-form" method="post" action="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Your name :</label>
-                                    <input type="text" class="form-control" id="conName" name="name">
+                        <form class="contact-form" id="contact-form" method="post" action="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Your name :</label>
+                                        <input type="text" class="form-control" id="conName" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Your email :</label>
+                                        <input type="text" class="form-control" id="conEmail" name="email">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Your email :</label>
-                                    <input type="text" class="form-control" id="conEmail" name="email">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone number :</label>
+                                        <input type="text" class="form-control" id="conPhone" name="phone">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="phone">Phone number :</label>
-                                    <input type="text" class="form-control" id="conPhone" name="phone">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject">Subject :</label>
+                                        <input type="text" class="form-control" id="conSubject" name="subject">
+                                    </div>
                                 </div>
+                            </div><!-- /.row -->
+                            <div class="form-group">
+                                <label for="email">Your message :</label>
+                                <textarea class="form-control" id="conMessage" name="message"></textarea>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="subject">Subject :</label>
-                                    <input type="text" class="form-control" id="conSubject" name="subject">
-                                </div>
+                            <div class="form-group">
+                                <input type="button" id="contact-form-submit" name="submit" value="Send Message" class="btn btn-primary">
                             </div>
-                        </div><!-- /.row -->
-                        <div class="form-group">
-                            <label for="email">Your message :</label>
-                            <textarea class="form-control" id="conMessage" name="message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="button" id="contact-form-submit" name="submit" value="Send Message" class="btn btn-primary">
-                        </div>
-                    </form>
-                </div>*@
+                        </form>
+                    </div>*@
 
                 <div class="col-md-12 contact-address text-center">
                     <div class="row">
@@ -761,26 +762,26 @@
     <!-- Maps Section Ends Here-->
     <!-- subscribe -->
     @*<div class="section section-newsletter no-margin-bottom no-margin-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="300ms">
-                    <h2>Sign up for Newsletter</h2>
-                    <p>We'll send email notifications everytime we release new Theme.</p>
-                </div>
-                <div class="col-lg-6 col-md-5 wow fadeIn" data-wow-delay="600ms">
-                    <form id="subscribe-form">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email" name="email">
-                            <span class="input-group-btn">
-                                <input type="submit" name="submit" value="Go!" class="btn btn-primary">
-                            </span>
-                        </div><!-- /input-group -->
-                        <div class="error-msg"></div>
-                    </form>
-                </div>
-            </div><!-- row -->
-        </div>
-    </div>*@
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="300ms">
+                        <h2>Sign up for Newsletter</h2>
+                        <p>We'll send email notifications everytime we release new Theme.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-5 wow fadeIn" data-wow-delay="600ms">
+                        <form id="subscribe-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email" name="email">
+                                <span class="input-group-btn">
+                                    <input type="submit" name="submit" value="Go!" class="btn btn-primary">
+                                </span>
+                            </div><!-- /input-group -->
+                            <div class="error-msg"></div>
+                        </form>
+                    </div>
+                </div><!-- row -->
+            </div>
+        </div>*@
     <!-- /.section -->
     <!-- copyright -->
     <div class="copyright">
