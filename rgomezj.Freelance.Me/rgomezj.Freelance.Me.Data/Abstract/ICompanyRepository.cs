@@ -6,8 +6,8 @@ using System.Text;
 
 namespace rgomezj.Freelance.Me.Data.Abstract
 {
-    public interface IGeneralInfoRepository
+    public interface ICompanyRepository
     {
-        GeneralInfo Get();
+        List<Company> GetAll();
     }
 }

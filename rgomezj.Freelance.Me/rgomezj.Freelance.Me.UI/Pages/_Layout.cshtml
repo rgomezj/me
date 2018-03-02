@@ -91,7 +91,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1>Roger Gomez - Software Developer</h1>
+                        <h1>@Model.GeneralInfo.Name - @Model.GeneralInfo.Title</h1>
                         <span class="line"></span>
                         <p>
 
@@ -269,149 +269,29 @@
     <div class="section section-team">
         <div class="container">
             <div class="row">
-                <div class="skills">
+                <ul class="skills">
+                    @{ int i = 0; }
                     <ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInLeft animated" style="visibility: visible;">
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                C#
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                ASP.Net
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 80%;">
-                                Javascript
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 75%;">
-                                HTML/CSS
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                SQL Server (Transact SQL)
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 85%;">
-                                Oracle (PL/SQL)
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="20" style="width: 30%;">
-                                .Net Core - Learning.......
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="80" style="width: 30%;">
-                                React JS - Learning.......
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="80" style="width: 30%;">
-                                Azure - Learning.......
-                            </div>
-                        </li>
+                        @foreach (var skill in Model.Skills)
+                        {
+                            @if (i > 0 && i % 9 == 0)
+                            {
+                                // close the div and start again
+                                @:</ul><ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInLeft animated" style="visibility: visible;">
+                            }
+                            <li class="progress" style="opacity: 1; left: 0px;">
+                                <div class="progress-bar" data-width="85" style="width: @skill.PercentageExpertise%;">
+                                    @skill.SkillName
+                                </div>
+                            </li>
+                            i++;
+                        }
                     </ul>
-                    <ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight animated" style="visibility: visible;">
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                Microsoft Dynamics CRM
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 80%;">
-                                Patterns and Practices
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 80%;">
-                                Requirements Gathering
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                Software Design
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                Problem Solving
-                            </div>
-                        </li>
-                        <li class="progress" style="opacity: 1; left: 0px;">
-                            <div class="progress-bar" data-width="85" style="width: 90%;">
-                                Team Leadership
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
             </div>
-        </div><!-- /.container -->
+        </div>
+    </div><!-- /.container -->
     </div><!-- /.section -->
-    <!-- process -->
-    @*<div class="section section-process" id="process" data-parallax="scroll" data-image-src="/template/assets/img/process-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center wow fadeIn" data-wow-delay="200ms">
-                        <h2>How we do it</h2>
-                        <p>Steps we follow to make your dream reality</p>
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-pills" role="tablist">
-                            <li role="presentation" class="active"><a href="#plan" aria-controls="plan" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Plan</a></li>
-                            <li role="presentation"><a href="#create" aria-controls="create" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Create</a></li>
-                            <li role="presentation"><a href="#test" aria-controls="test" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Test</a></li>
-                            <li role="presentation"><a href="#launch" aria-controls="launch" role="tab" data-toggle="tab"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span> Launch</a></li>
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active fade in" id="plan">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur.
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade " id="create">
-                                <p>
-                                    Wallem loty porem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur.
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade " id="test">
-                                <p>
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade " id="launch">
-                                <p>
-                                    Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur.
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-8 -->
-                </div>
-            </div>
-        </div>*@
-    <!-- /.section -->
+   
     <!-- works -->
     <div class="section section-works" id="works">
         <div class="container">
@@ -420,68 +300,20 @@
                     <h2>Companies I have worked for</h2>
                     <p></p>
                 </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="work wow fadeInUp" data-wow-delay="200ms">
-                        <a class="gallery-work" href="~/template/assets/img/works/1-lg.jpg">
-                            <img src="~/template/assets/img/works/1.jpg" class="img-responsive" alt="Intergrupo">
-                            <div class="details">
-                                <h4>Intergrupo</h4>
-                                <p>Software Developer</p>
-                            </div><!-- details -->
-                        </a>
+                @foreach (var company in Model.Companies)
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="work wow fadeInUp" data-wow-delay="200ms">
+                            <a class="gallery-work" href="~/template/assets/img/works/1-lg.jpg">
+                                <img src="~/@company.LogoPath" class="img-responsive" alt=@company.CompanyName>
+                                <div class="details">
+                                    <h4>@company.CompanyName</h4>
+                                    <p>@company.Position</p>
+                                </div><!-- details -->
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="work wow fadeInUp" data-wow-delay="400ms">
-                        <a class="gallery-work" href="~/template/assets/img/works/2-lg.jpg">
-                            <img src="~/template/assets/img/works/2.jpg" class="img-responsive" alt="Edatel">
-                            <div class="details">
-                                <h4>Edatel</h4>
-                                <p>Software Developer-Analyst</p>
-                            </div><!-- details -->
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="work wow fadeInUp" data-wow-delay="600ms">
-                        <a class="gallery-work" href="~/template/assets/img/works/3.png">
-                            <img src="~/template/assets/img/works/3.png" class="img-responsive" alt="Compuredes">
-                            <div class="details">
-                                <h4>Compuredes</h4>
-                                <p>Software Developer</p>
-                            </div><!-- details -->
-                        </a>
-                    </div><!-- work -->
-                </div>
-
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="work wow fadeInUp" data-wow-delay="1000ms">
-                        <a class="gallery-work" href="~/template/assets/img/works/5-lg.jpg">
-                            <img src="~/template/assets/img/works/5.jpg" class="img-responsive" alt="Pavliks">
-                            <div class="details">
-                                <h4>Pavliks.com</h4>
-                                <p>Technical Leader</p>
-                            </div><!-- details -->
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="work wow fadeInUp" data-wow-delay="1200ms">
-                        <a class="gallery-work" href="~/template/assets/img/works/4.jpg">
-                            <img src="~/template/assets/img/works/4.jpg" class="img-responsive" alt="Upwork">
-                            <div class="details">
-                                <h4>Upwork</h4>
-                                <p>Freelance Software Developer</p>
-                            </div><!-- details -->
-                        </a>
-                    </div>
-                </div>
-
+                }
             </div>
         </div>
     </div><!-- /.section -->
@@ -494,51 +326,20 @@
                     <p>See opinions from clients and co-workers.</p>
                     <div class="testimonials owl-carousel owl-theme" id="testimonials">
 
-                        <div class="textimonial-box item">
-                            <div class="client">
-                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/1.jpg);"></div>
-                                <h4>Giovanny Alzate</h4>
-                                <p style="font-weight:bold">UruIT</p>
-                            </div>
-                            <div class="testimonial-content">
-                                I know Roger for almost 15 years and I have had the opportunity to work with him in a couple of opportunities. Roger is a person who loves what he does, he is the kind of people who make the things happen, his commitment talks by himself and when things go wrong he is the one to propose solutions, he is the “fixer”. Roger has leadership skills, he enjoys learning new stuff participating actively in .Net communities, in short Roger is the one I would want to work with in my team.
-                            </div>
-                        </div><!-- /.testimonial-box -->
-
-                        <div class="textimonial-box item">
-                            <div class="client">
-                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/2.jpg);"></div>
-                                <h4>Juan David Lara</h4>
-                                <p style="font-weight:bold">Globant</p>
-                            </div>
-                            <div class="testimonial-content">
-                                Excellent engineer, direct person, clear, committed, responsible, collaborator, team player, great technical knowledge and resourceful
-                            </div>
-                        </div>
-
-                        <div class="textimonial-box item">
-                            <div class="client">
-                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/1.jpg);"></div>
-                                <h4>Frank Wyton</h4>
-                                <p style="font-weight:bold">www.wyware.com</p>
-                            </div>
-                            <div class="testimonial-content">
-                                Pending
-                            </div>
-                        </div><!-- /.testimonial-box -->
-
-                        <div class="textimonial-box item">
-                            <div class="client">
-                                <div class="client-img" style="background-image: url(~/template/assets/img/clients/2.jpg);"></div>
-                                <h4>Salim Adamon</h4>
-                                <p style="font-weight:bold">https://www.sadax-technology.com</p>
-                            </div>
-                            <div class="testimonial-content">
-                                I have been extremely please by my experience working with Roger. Not only does he have very strong technical skills with Dynamics CRM and related development technologies, he also has the ability learn new tools and features and become proficient in no time. His understanding of business needs allowed us to delegate work to him with confidence that the necessary thought process would be applied when building application features. My team really enjoys working with him.
-                            </div>
-                        </div>
-
-                        <!-- /.testimonial-box -->
+                        @foreach (var reference in Model.References)
+                    {
+                                    <div class="textimonial-box item">
+                                        <div class="client">
+                                            <div class="client-img" style="background-image: url(~/template/assets/img/clients/1.jpg);"></div>
+                                            <h4>@reference.ReferenceName</h4>
+                                            <a href="@reference.WebPage" target="_blank"><p style="font-weight:bold">@reference.ReferenceCompanyPosition</p></a>
+                                            
+                                        </div>
+                                        <div class="testimonial-content">
+                                            @reference.ReferenceDescription
+                                        </div>
+                                    </div>  
+                }
 
                     </div>
                 </div>
@@ -552,7 +353,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="client-logo text-center owl-carousel owl-theme" id="client-logos">
-                        <img src="~/template/assets/img/client-logo/1.jpeg" class="img-responsive item" alt="Sadax">
+                        <img src="~/template/assets/img/client-logo/1.jpeg" class="img-responsive item" alt="Solid">
                         <img src="~/template/assets/img/client-logo/2.png" class="img-responsive item" alt=".Net">
                         <img src="~/template/assets/img/client-logo/3.jpg" class="img-responsive item" alt="Dynamics CRM">
                         <img src="~/template/assets/img/client-logo/4.png" class="img-responsive item" alt="Oracle">
@@ -564,97 +365,7 @@
         </div>
     </div>
 
-    <!-- pricing -->
-    @*<div class="section section-pricing" id="pricing" data-parallax="scroll" data-image-src="/template/assets/img/price-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2>Our Pricing</h2>
-                        <p>Our packages are build for every type of customers. Easy &amp; Affordable.</p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="pricing text-center wow fadeIn" data-wow-delay="200ms">
-                            <div class="pricing-name">
-                                <h3>Personal</h3>
-                                <div class="price">
-                                    <span class="number">
-                                        <sup>$</sup>16
-                                    </span>
-                                    per month
-                                </div>
-                            </div>
-                            <div class="price-content">
-                                <ul class="price-features">
-                                    <li>15 Users</li>
-                                    <li>30 Days Access</li>
-                                    <li>Special Content</li>
-                                    <li>No hidden fees</li>
-                                    <li>5GB Downloads</li>
-                                    <li>24x7 Support</li>
-                                </ul>
-                                <a href="#" class="btn btn-primary btn-block">Sign up</a>
-                            </div><!-- /.price-content -->
-                        </div>
-                    </div><!-- /.col-md-4 -->
-
-                    <div class="col-md-4">
-                        <div class="pricing text-center wow fadeIn" data-wow-delay="500ms">
-                            <div class="pricing-name">
-                                <h3>Professional</h3>
-                                <div class="price">
-                                    <span class="number">
-                                        <sup>$</sup>30
-                                    </span>
-                                    per month
-                                </div>
-                                <div class="sale-box">
-                                    <span class="on_sale title_shop">Popular</span>
-                                </div>
-                            </div>
-                            <div class="price-content">
-                                <ul class="price-features">
-                                    <li>25 Users</li>
-                                    <li>Unlimited Access</li>
-                                    <li>Special Content</li>
-                                    <li>No hidden fees</li>
-                                    <li>Free Downloads</li>
-                                    <li>24x7 Support</li>
-                                </ul>
-                                <a href="#" class="btn btn-primary btn-block">Sign up</a>
-                            </div><!-- /.price-content -->
-                        </div>
-                    </div><!-- /.col-md-4 -->
-
-                    <div class="col-md-4">
-                        <div class="pricing text-center wow fadeIn" data-wow-delay="800ms">
-                            <div class="pricing-name">
-                                <h3>Business</h3>
-                                <div class="price">
-                                    <span class="number">
-                                        <sup>$</sup>50
-                                    </span>
-                                    per month
-                                </div>
-                            </div>
-                            <div class="price-content">
-                                <ul class="price-features">
-                                    <li>50 Users</li>
-                                    <li>Unlimited Access</li>
-                                    <li>Special Content</li>
-                                    <li>No hidden fees</li>
-                                    <li>Free Downloads</li>
-                                    <li>24x7 Support</li>
-                                </ul>
-                                <a href="#" class="btn btn-primary btn-block">Sign up</a>
-                            </div><!-- /.price-content -->
-                        </div>
-                    </div><!-- /.col-md-4 -->
-
-                </div>
-            </div>
-        </div>*@
-    <!-- /.section -->
+   
     <!-- contact -->
     <div class="section section-contact no-margin-bottom" id="contact" style="background-image:url('/template/assets/img/contact-bg.png');">
         <div class="container">
@@ -711,15 +422,15 @@
                             <img class="icon" src="~/template/assets/img/icons/phone-call.png" alt="phone call">
                             <h4>Contact Me</h4>
                             <p>
-                                +57 3006318287<br>
-                                rogergomez780@gmail.com
+                                @Model.GeneralInfo.Phone<br>
+                                @Model.GeneralInfo.EmailAddress
                             </p>
                         </div>
                         <div class="col-md-6 col-sm-4 wow fadeInUp" data-wow-delay="800ms">
                             <img class="icon" src="~/template/assets/img/icons/placeholder.png" alt="placeholder">
                             <h4>Location</h4>
                             <p>
-                                Medellin, Colombia<br>
+                                @Model.GeneralInfo.Location<br>
                             </p>
                         </div>
                         <div class="col-md-12 col-sm-4 wow fadeInUp" data-wow-delay="1200ms">
@@ -760,29 +471,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDryG820sn6a0ptMga9C_qFjHejm1LSv2k&callback=initMap">
     </script>
     <!-- Maps Section Ends Here-->
-    <!-- subscribe -->
-    @*<div class="section section-newsletter no-margin-bottom no-margin-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="300ms">
-                        <h2>Sign up for Newsletter</h2>
-                        <p>We'll send email notifications everytime we release new Theme.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-5 wow fadeIn" data-wow-delay="600ms">
-                        <form id="subscribe-form">
-                            <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Enter your email" name="email">
-                                <span class="input-group-btn">
-                                    <input type="submit" name="submit" value="Go!" class="btn btn-primary">
-                                </span>
-                            </div><!-- /input-group -->
-                            <div class="error-msg"></div>
-                        </form>
-                    </div>
-                </div><!-- row -->
-            </div>
-        </div>*@
-    <!-- /.section -->
+   
     <!-- copyright -->
     <div class="copyright">
         <div class="container">

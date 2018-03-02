@@ -9,16 +9,16 @@ using System.Text;
 
 namespace rgomezj.Freelance.Me.Data.Implementation.JSON
 {
-    public class JSONGeneralInfoRepository : JSONConfigContext, IGeneralInfoRepository 
+    public class JSONReferenceRepository : JSONConfigContext, IReferenceRepository
     {
-        public JSONGeneralInfoRepository(JSONDatabaseConfig config) : base(config, "GeneralInfo.json")
+        public JSONReferenceRepository(JSONDatabaseConfig config) : base(config, "References.json")
         {
         }
 
-        public GeneralInfo Get()
+        public List<Reference> GetAll()
         {
-            GeneralInfo generalInfo = this.GetEntity<GeneralInfo>();
-            return generalInfo;
+            List<Reference> references = this.GetEntity<List<Reference>>();
+            return references;
         }
     }
 }

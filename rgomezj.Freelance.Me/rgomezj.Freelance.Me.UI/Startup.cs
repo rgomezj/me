@@ -39,6 +39,9 @@ namespace rgomezj.Freelance.Me.UI
             var JSONDatabaseConfiguration = Configuration.GetSection("JSONDatabase").Get<JSONDatabaseConfig>();
             JSONDatabaseConfiguration.BasePath = _environment.ContentRootPath + Path.DirectorySeparatorChar.ToString() + "App_Data" + Path.DirectorySeparatorChar.ToString() + "me" + Path.DirectorySeparatorChar.ToString();
             services.AddTransient<IGeneralInfoRepository>(s => new JSONGeneralInfoRepository(JSONDatabaseConfiguration));
+            services.AddTransient<ISkillRepository>(s => new JSONSkillRepository(JSONDatabaseConfiguration));
+            services.AddTransient<ICompanyRepository>(s => new JSONCompanyRepository(JSONDatabaseConfiguration));
+            services.AddTransient<IReferenceRepository>(s => new JSONReferenceRepository(JSONDatabaseConfiguration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

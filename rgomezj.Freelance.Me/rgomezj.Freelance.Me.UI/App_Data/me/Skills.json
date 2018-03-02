@@ -1,0 +1,77 @@
+﻿[
+  {
+    "SortOrder": 1,
+    "SkillName": "C#",
+    "PercentageExpertise": "90"
+  },
+  {
+    "SortOrder": 2,
+    "SkillName": "ASP.Net",
+    "PercentageExpertise": "90"
+  },
+  {
+    "SortOrder": 3,
+    "SkillName": "Javascript",
+    "PercentageExpertise": "80"
+  },
+  {
+    "SortOrder": 4,
+    "SkillName": "HTML/CSS",
+    "PercentageExpertise": "75"
+  },
+  {
+    "SortOrder": 5,
+    "SkillName": "SQL Server (Transact SQL)",
+    "PercentageExpertise": "90"
+  },
+  {
+    "SortOrder": 6,
+    "SkillName": "Oracle (PL/SQL)",
+    "PercentageExpertise": "85"
+  },
+  {
+    "SortOrder": 7,
+    "SkillName": ".Net Core - Learning.......",
+    "PercentageExpertise": "30"
+  },
+  {
+    "SortOrder": 8,
+    "SkillName": "React JS - Learning.......",
+    "PercentageExpertise": "30"
+  },
+  {
+    "SortOrder": 9,
+    "SkillName": "Azure - Learning.......",
+    "PercentageExpertise": "30"
+  },
+  {
+    "SortOrder": 10,
+    "SkillName": "Microsoft Dynamics CRM",
+    "PercentageExpertise": "90"
+  },
+  {
+    "SortOrder": 11,
+    "SkillName": "Patterns and Practices",
+    "PercentageExpertise": "80"
+  },
+  {
+    "SortOrder": 12,
+    "SkillName": "Requirements Gathering",
+    "PercentageExpertise": "80"
+  },
+  {
+    "SortOrder": 13,
+    "SkillName": "Software Design",
+    "PercentageExpertise": "90"
+  },
+  {
+    "SortOrder": 14,
+    "SkillName": "Problem Solving",
+    "PercentageExpertise": "90"
+  },
+  {
+    "SortOrder": 15,
+    "SkillName": "Team Leadership",
+    "PercentageExpertise": "90"
+  }
+]

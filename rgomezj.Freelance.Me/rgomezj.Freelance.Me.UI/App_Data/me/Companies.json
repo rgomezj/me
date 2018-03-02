@@ -1,0 +1,32 @@
+﻿[
+  {
+    "SortOrder": 1,
+    "CompanyName": "Intergrupo",
+    "Position": "Software Developer",
+    "LogoPath": "template/assets/img/works/1.jpg"
+  },
+  {
+    "SortOrder": 2,
+    "CompanyName": "Edatel",
+    "Position": "Software Developer-Analyst",
+    "LogoPath": "template/assets/img/works/2.jpg"
+  },
+  {
+    "SortOrder": 3,
+    "CompanyName": "Compuredes",
+    "Position": "Software Developer",
+    "LogoPath": "template/assets/img/works/3.png"
+  },
+  {
+    "SortOrder": 4,
+    "CompanyName": "Pavliks.com",
+    "Position": "Technical Leader",
+    "LogoPath": "template/assets/img/works/5.jpg"
+  },
+  {
+    "SortOrder": 5,
+    "CompanyName": "Upwork",
+    "Position": "Freelance Software Developer",
+    "LogoPath": "template/assets/img/works/4.jpg"
+  }
+]

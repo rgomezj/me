@@ -2,5 +2,10 @@
   "ClientsFreelanceCount": "2",
   "DynamicsCRMProjectsDelivered": "10",
   "YearsTechnicalLead": "3",
-  "YearsWorkingSoftware": "11"
+  "YearsWorkingSoftware": "11",
+  "Name": "Roger Gomez",
+  "Title": "Software Developer",
+  "Phone": "+57 3006318287",
+  "EmailAddress": "rogergomez780@gmail.com",
+  "Location": "Medellin, Colombia"
 }

@@ -9,16 +9,16 @@ using System.Text;
 
 namespace rgomezj.Freelance.Me.Data.Implementation.JSON
 {
-    public class JSONGeneralInfoRepository : JSONConfigContext, IGeneralInfoRepository 
+    public class JSONSkillRepository : JSONConfigContext, ISkillRepository
     {
-        public JSONGeneralInfoRepository(JSONDatabaseConfig config) : base(config, "GeneralInfo.json")
+        public JSONSkillRepository(JSONDatabaseConfig config) : base(config, "Skills.json")
         {
         }
 
-        public GeneralInfo Get()
+        public List<Skill> GetAll()
         {
-            GeneralInfo generalInfo = this.GetEntity<GeneralInfo>();
-            return generalInfo;
+            List<Skill> skills = this.GetEntity<List<Skill>>();
+            return skills;
         }
     }
 }
