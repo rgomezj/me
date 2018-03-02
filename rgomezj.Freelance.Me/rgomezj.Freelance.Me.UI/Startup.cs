@@ -42,6 +42,8 @@ namespace rgomezj.Freelance.Me.UI
             services.AddTransient<ISkillRepository>(s => new JSONSkillRepository(JSONDatabaseConfiguration));
             services.AddTransient<ICompanyRepository>(s => new JSONCompanyRepository(JSONDatabaseConfiguration));
             services.AddTransient<IReferenceRepository>(s => new JSONReferenceRepository(JSONDatabaseConfiguration));
+            services.AddTransient<ITechnologyRepository>(s => new JSONTechnologyRepository(JSONDatabaseConfiguration));
+            services.AddTransient<IAptitudeRepository>(s => new JSONAptitudeRepository(JSONDatabaseConfiguration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,32 @@
+﻿[
+  {
+    "SortOrder": 1,
+    "TechnologyName": "Solid",
+    "LogoPath": "template/assets/img/client-logo/1.jpeg"
+  },
+  {
+    "SortOrder": 2,
+    "TechnologyName": ".Net",
+    "LogoPath": "template/assets/img/client-logo/2.png"
+  },
+  {
+    "SortOrder": 3,
+    "TechnologyName": "Dynamics CRM",
+    "LogoPath": "template/assets/img/client-logo/3.jpg"
+  },
+  {
+    "SortOrder": 4,
+    "TechnologyName": "Oracle",
+    "LogoPath": "template/assets/img/client-logo/4.png"
+  },
+  {
+    "SortOrder": 5,
+    "TechnologyName": "JS",
+    "LogoPath": "template/assets/img/client-logo/5.png"
+  },
+  {
+    "SortOrder": 6,
+    "TechnologyName": "ASPNET",
+    "LogoPath": "template/assets/img/client-logo/6.png"
+  }
+]

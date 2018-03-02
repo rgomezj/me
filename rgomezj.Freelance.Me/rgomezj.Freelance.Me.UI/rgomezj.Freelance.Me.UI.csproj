@@ -17,6 +17,12 @@
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="App_Data\me\Aptitudes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="App_Data\me\Technologies.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="App_Data\me\References.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

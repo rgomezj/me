@@ -1,0 +1,38 @@
+﻿[
+  {
+    "SortOrder": 1,
+    "Title": "Resourceful",
+    "Description": "Even though I have my preferences in technology. I have used a wide variety of technologies/tools to meet business needs",
+    "IconPath": "template/assets/img/icons/network.png"
+  },
+  {
+    "SortOrder": 2,
+    "Title": "Fast Learner",
+    "Description": "As technology evolves, adapting to changes and learning quickly allows me to bring solutions to reality",
+    "IconPath": "template/assets/img/icons/optimization-clock.png"
+  },
+  {
+    "SortOrder": 3,
+    "Title": "Configuration Management",
+    "Description": "Not only involved in Development activities but in deployments and configuration management for the solutions delivered",
+    "IconPath": "template/assets/img/icons/settings.png"
+  },
+  {
+    "SortOrder": 4,
+    "Title": "Detail Oriented",
+    "Description": "Not just coding, I understand sometimes solutions go beyond the code itself, so paying special attention to requirements and proposing different ways to do things (which may or not involve code)",
+    "IconPath": "template/assets/img/icons/monitoring.png"
+  },
+  {
+    "SortOrder": 5,
+    "Title": "Communication",
+    "Description": "Good communication skills, meeting with clients for management of the projects or production support. Providing technical and functional training",
+    "IconPath": "template/assets/img/icons/operator.png"
+  },
+  {
+    "SortOrder": 6,
+    "Title": "Work with love",
+    "Description": "I enjoy what I do, being a software developer and bringing solutions through the knowledge I have gained, is one of my passions",
+    "IconPath": "template/assets/img/icons/like.png"
+  }
+]

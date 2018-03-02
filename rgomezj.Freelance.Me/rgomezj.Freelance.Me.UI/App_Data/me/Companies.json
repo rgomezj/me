@@ -28,5 +28,11 @@
     "CompanyName": "Upwork",
     "Position": "Freelance Software Developer",
     "LogoPath": "template/assets/img/works/4.jpg"
+  },
+  {
+    "SortOrder": 6,
+    "CompanyName": "Wyware Solutions",
+    "Position": "Freelance Software Developer",
+    "LogoPath": "template/assets/img/works/6.png"
   }
 ]

@@ -8,6 +8,10 @@ namespace rgomezj.Freelance.Me.Core.Profile
 
         public string Title { get; set; }
 
+        public string Subtitle { get; set; }
+
+        public string Summary { get; set; }
+
         public string Phone { get; set; }
 
         public string EmailAddress { get; set; }

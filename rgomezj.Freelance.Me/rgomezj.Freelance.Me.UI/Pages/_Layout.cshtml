@@ -111,125 +111,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>Detail Oriented, Resourceful, Fast Learner</h2>
+                    <h2>@Model.GeneralInfo.Subtitle</h2>
                     <p>
-                        Expertise in software development (back end and front end), patterns, practices, and
-                        continuous integration.
-                        &#9658; 10+ years of experience working with enterprise databases including SQL Server and Oracle.
-                        &#9658; Worked within all aspects of the software development lifecycle.
-                        &#9658; A long record of working with customers and developers to successfully deliver solutions that
-                        meet business needs.
-                        &#9658; Extremely experienced using the Microsoft Stack.
+                        @Html.Raw(Model.GeneralInfo.Summary) 
                     </p>
                 </div>
+                @foreach (var aptitude in Model.Aptitudes)
+                {
+                        <div class="col-md-4 col-sm-6">
+                            <div class="feature-box wow fadeInUp" data-wow-delay="200ms">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object" src="~/@aptitude.IconPath" alt=@aptitude.Title>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">@aptitude.Title</h4>
+                                        <p>
+                                            @aptitude.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.col-md-4 -->
+                }
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box wow fadeInUp" data-wow-delay="200ms">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="~/template/assets/img/icons/network.png" alt="responsive">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Resourceful</h4>
-                                <p>
-                                    Even though I have my preferences in technology. I have used a wide variety of technologies/tools to meet business needs
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box wow fadeInUp" data-wow-delay="400ms">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="~/template/assets/img/icons/optimization-clock.png" alt="clock">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Fast Learner</h4>
-                                <p>
-                                    As technology evolves, adapting to changes and learning quickly allows me to bring solutions to reality
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box wow fadeInUp" data-wow-delay="600ms">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="~/template/assets/img/icons/settings.png" alt="settings">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Configuration Management</h4>
-                                <p>
-                                    Not only involved in Development activities but in deployments and configuration management for the solutions delivered
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box wow fadeInUp" data-wow-delay="800ms">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="~/template/assets/img/icons/monitoring.png" alt="monitoring">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Detail Oriented</h4>
-                                <p>
-                                    Not just coding, I understand sometimes solutions go beyond the code itself, so paying special attention to requirements and proposing different ways to do things (which may or not involve code)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box wow fadeInUp" data-wow-delay="1000ms">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="~/template/assets/img/icons/operator.png" alt="operator">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Communication</h4>
-                                <p>
-                                    Good communication skills, meeting with clients for management of the projects or production support. Providing technical and functional training
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-4 -->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box wow fadeInUp" data-wow-delay="1200ms">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="~/template/assets/img/icons/like.png" alt="heart">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Work with love</h4>
-                                <p>
-                                    I enjoy what I do, being a software developer and bringing solutions through the knowledge I have gained, is one of my passions
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.col-md-4 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- /.section -->
@@ -353,12 +260,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="client-logo text-center owl-carousel owl-theme" id="client-logos">
-                        <img src="~/template/assets/img/client-logo/1.jpeg" class="img-responsive item" alt="Solid">
-                        <img src="~/template/assets/img/client-logo/2.png" class="img-responsive item" alt=".Net">
-                        <img src="~/template/assets/img/client-logo/3.jpg" class="img-responsive item" alt="Dynamics CRM">
-                        <img src="~/template/assets/img/client-logo/4.png" class="img-responsive item" alt="Oracle">
-                        <img src="~/template/assets/img/client-logo/5.png" class="img-responsive item" alt="JS">
-                        <img src="~/template/assets/img/client-logo/6.png" class="img-responsive item" alt="ASPNET">
+                        @foreach (var technology in Model.Technologies)
+                        {
+                         <img src="~/@technology.LogoPath" class="img-responsive item" alt=@technology.TechnologyName>
+                        }
                     </div>
                 </div>
             </div><!-- /.row -->
