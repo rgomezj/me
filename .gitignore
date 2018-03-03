@@ -121,3 +121,7 @@ connections.config
 .Trashes
 ehthumbs.db
 Thumbs.db
+**/mysettings.json
+**/mysettings.Development.json
+**/mysettings.staging.json
+**/mysettings.production.json
