@@ -11,9 +11,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\rgomezj.Freelance.Me.Data\rgomezj.Freelance.Me.Data.csproj" />
+    <ProjectReference Include="..\rgomezj.Freelance.Me.Services\rgomezj.Freelance.Me.Services.csproj" />
     <ProjectReference Include="..\rgomezj.Freelance.Me\rgomezj.Freelance.Me.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Content Update="mysettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
