@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using rgomezj.Freelance.Me.Core;
+using rgomezj.Freelance.Me.Core.Settings;
 using rgomezj.Freelance.Me.Data.Abstract;
 using rgomezj.Freelance.Me.Data.Implementation.JSON;
 using rgomezj.Freelance.Me.Data.Implementation.JSON.Config;
+using rgomezj.Freelance.Me.Services.Abstract;
+using rgomezj.Freelance.Me.Services.Implementation;
 
 namespace rgomezj.Freelance.Me.UI
 {
@@ -21,9 +24,12 @@ namespace rgomezj.Freelance.Me.UI
 
         public Startup(IHostingEnvironment env)
         {
+            string pathOfCommonSettingsFile = Path.Combine(env.ContentRootPath, "..", "Common");
+
             // Set up configuration sources.
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("mysettings.json")
+                .AddJsonFile($"mysettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
             _environment = env;
@@ -37,6 +43,8 @@ namespace rgomezj.Freelance.Me.UI
             services.AddMvc();
             services.AddOptions();
             var JSONDatabaseConfiguration = Configuration.GetSection("JSONDatabase").Get<JSONDatabaseConfig>();
+            var emailSettings = Configuration.GetSection("emailSettings").Get<EmailSettings>();
+
             JSONDatabaseConfiguration.BasePath = _environment.ContentRootPath + Path.DirectorySeparatorChar.ToString() + "App_Data" + Path.DirectorySeparatorChar.ToString() + "me" + Path.DirectorySeparatorChar.ToString();
             services.AddTransient<IGeneralInfoRepository>(s => new JSONGeneralInfoRepository(JSONDatabaseConfiguration));
             services.AddTransient<ISkillRepository>(s => new JSONSkillRepository(JSONDatabaseConfiguration));
@@ -44,6 +52,7 @@ namespace rgomezj.Freelance.Me.UI
             services.AddTransient<IReferenceRepository>(s => new JSONReferenceRepository(JSONDatabaseConfiguration));
             services.AddTransient<ITechnologyRepository>(s => new JSONTechnologyRepository(JSONDatabaseConfiguration));
             services.AddTransient<IAptitudeRepository>(s => new JSONAptitudeRepository(JSONDatabaseConfiguration));
+            services.AddTransient<IEmailService>(s => new SendGridEmailService(emailSettings));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

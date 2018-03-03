@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using rgomezj.Freelance.Me.Core;
 using rgomezj.Freelance.Me.Core.Profile;
 using rgomezj.Freelance.Me.Data.Abstract;
+using rgomezj.Freelance.Me.Services.Abstract;
 
 namespace rgomezj.Freelance.Me.UI.Pages
 {
@@ -18,6 +19,7 @@ namespace rgomezj.Freelance.Me.UI.Pages
         private readonly IReferenceRepository _referenceRepository;
         private readonly ITechnologyRepository _technologyRepository;
         private readonly IAptitudeRepository _aptitudeRepository;
+        private readonly IEmailService _emailService;
 
         public GeneralInfo GeneralInfo { get; private set; }
         public List<Skill> Skills { get; private set; }
@@ -26,7 +28,7 @@ namespace rgomezj.Freelance.Me.UI.Pages
         public List<Technology> Technologies { get; private set; }
         public List<Aptitude> Aptitudes { get; private set; }
 
-        public IndexModel(IGeneralInfoRepository generalInfoRepository, ISkillRepository skillRepository, ICompanyRepository companyRepository, IReferenceRepository referenceRepository, ITechnologyRepository technologyRepository, IAptitudeRepository aptitudeRepository)
+        public IndexModel(IGeneralInfoRepository generalInfoRepository, ISkillRepository skillRepository, ICompanyRepository companyRepository, IReferenceRepository referenceRepository, ITechnologyRepository technologyRepository, IAptitudeRepository aptitudeRepository, IEmailService emailService)
         {
             this._generalInfoRepository = generalInfoRepository;
             this._skillRepository = skillRepository;
@@ -34,6 +36,7 @@ namespace rgomezj.Freelance.Me.UI.Pages
             this._referenceRepository = referenceRepository;
             this._technologyRepository = technologyRepository;
             this._aptitudeRepository = aptitudeRepository;
+            this._emailService = emailService;
         }
 
         public void OnGet()
@@ -44,6 +47,7 @@ namespace rgomezj.Freelance.Me.UI.Pages
             References = _referenceRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Reference>();
             Technologies = _technologyRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Technology>();
             Aptitudes = _aptitudeRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Aptitude>();
+            _emailService.SendEmail();
         }
     }
 }

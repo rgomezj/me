@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rgomezj.Freelance.Me.UI", "rgomezj.Freelance.Me.UI\rgomezj.Freelance.Me.UI.csproj", "{E4C713D9-C099-4F00-AC18-CB2D72EC4626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rgomezj.Freelance.Me.Core", "rgomezj.Freelance.Me\rgomezj.Freelance.Me.Core.csproj", "{13F77016-5B82-4EE3-A639-4C03862AEB5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rgomezj.Freelance.Me.Core", "rgomezj.Freelance.Me\rgomezj.Freelance.Me.Core.csproj", "{13F77016-5B82-4EE3-A639-4C03862AEB5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rgomezj.Freelance.Me.Data", "rgomezj.Freelance.Me.Data\rgomezj.Freelance.Me.Data.csproj", "{E745ED2C-659B-4FEA-9D74-B3CCA7B80A45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rgomezj.Freelance.Me.Data", "rgomezj.Freelance.Me.Data\rgomezj.Freelance.Me.Data.csproj", "{E745ED2C-659B-4FEA-9D74-B3CCA7B80A45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rgomezj.Freelance.Me.Services", "rgomezj.Freelance.Me.Services\rgomezj.Freelance.Me.Services.csproj", "{EB09794D-CB70-4A9A-BF78-A17690BC1613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E745ED2C-659B-4FEA-9D74-B3CCA7B80A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E745ED2C-659B-4FEA-9D74-B3CCA7B80A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E745ED2C-659B-4FEA-9D74-B3CCA7B80A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB09794D-CB70-4A9A-BF78-A17690BC1613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB09794D-CB70-4A9A-BF78-A17690BC1613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB09794D-CB70-4A9A-BF78-A17690BC1613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB09794D-CB70-4A9A-BF78-A17690BC1613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
