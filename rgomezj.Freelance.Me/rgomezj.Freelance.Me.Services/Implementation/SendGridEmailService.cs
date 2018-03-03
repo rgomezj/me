@@ -1,4 +1,5 @@
-﻿using rgomezj.Freelance.Me.Core.Settings;
+﻿using rgomezj.Freelance.Me.Core;
+using rgomezj.Freelance.Me.Core.Settings;
 using rgomezj.Freelance.Me.Services.Abstract;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -18,17 +19,17 @@ namespace rgomezj.Freelance.Me.Services.Implementation
             _emailSettings = emailSettings;
         }
 
-        public void SendEmail()
+        public void SendEmail(EmailMessage emailMessage)
         {
             var client = new SendGridClient(_emailSettings.ApiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("test@example.com", "DX Team"),
-                Subject = "Hello World from the SendGrid CSharp SDK!",
-                PlainTextContent = "Hello, Email!",
-                HtmlContent = "<strong>Hello, Email!</strong>"
+                From = new EmailAddress(emailMessage.From, emailMessage.FromName),
+                Subject = emailMessage.Subject,
+                PlainTextContent = emailMessage.Message,
+                HtmlContent = emailMessage.HTMLMessage
             };
-            msg.AddTo(new EmailAddress("rogergomez780@gmail.com", "Test User"));
+            msg.AddTo(new EmailAddress(emailMessage.To, emailMessage.ToName));
             client.SendEmailAsync(msg).Wait();
         }
     }
