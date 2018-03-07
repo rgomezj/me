@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace rgomezj.Freelance.Me.Data.Implementation.JSON
 {
@@ -15,9 +16,9 @@ namespace rgomezj.Freelance.Me.Data.Implementation.JSON
         {
         }
 
-        public List<Company> GetAll()
+        public async Task<List<Company>> GetAll()
         {
-            List<Company> companies = this.GetEntity<List<Company>>();
+            var companies = await this.GetEntity<List<Company>>();
             return companies;
         }
     }

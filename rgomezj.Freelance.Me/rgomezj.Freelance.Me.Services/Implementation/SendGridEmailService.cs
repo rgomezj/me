@@ -19,7 +19,7 @@ namespace rgomezj.Freelance.Me.Services.Implementation
             _emailSettings = emailSettings;
         }
 
-        public void SendEmail(EmailMessage emailMessage)
+        public async Task SendEmail(EmailMessage emailMessage)
         {
             var client = new SendGridClient(_emailSettings.ApiKey);
             var msg = new SendGridMessage()
@@ -30,7 +30,7 @@ namespace rgomezj.Freelance.Me.Services.Implementation
                 HtmlContent = emailMessage.HTMLMessage
             };
             msg.AddTo(new EmailAddress(emailMessage.To, emailMessage.ToName));
-            client.SendEmailAsync(msg).Wait();
+            await client.SendEmailAsync(msg);
         }
     }
 }

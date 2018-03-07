@@ -11,6 +11,6 @@ namespace rgomezj.Freelance.Me.Services.Abstract
     {
         CaptchaSettings GetSettings();
 
-        bool IsValidCaptcha(string secret, string response);
+        Task<bool> IsValidCaptcha(string secret, string response);
     }
 }

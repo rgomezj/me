@@ -30,9 +30,9 @@ namespace rgomezj.Freelance.Me.UI
         }
 
         [HttpPost]
-        public void Post(EmailMessage emailMessage)
+        public async Task Post(EmailMessage emailMessage)
         {
-            GeneralInfo generalInfo = _generalInfoRepository.Get();
+            GeneralInfo generalInfo = await _generalInfoRepository.Get();
             emailMessage.To = generalInfo.EmailAddress;
             emailMessage.ToName = generalInfo.Name;
             _emailService.SendEmail(emailMessage);

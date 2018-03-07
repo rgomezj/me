@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace rgomezj.Freelance.Me.Data.Implementation.JSON
 {
@@ -15,9 +16,9 @@ namespace rgomezj.Freelance.Me.Data.Implementation.JSON
         {
         }
 
-        public List<Reference> GetAll()
+        public async Task<List<Reference>> GetAll()
         {
-            List<Reference> references = this.GetEntity<List<Reference>>();
+            List<Reference> references = await this.GetEntity<List<Reference>>();
             return references;
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using rgomezj.Freelance.Me.Data.Implementation.JSON.Config;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace rgomezj.Freelance.Me.Data.Implementation.JSON
 {
@@ -13,14 +14,15 @@ namespace rgomezj.Freelance.Me.Data.Implementation.JSON
             File = new FileInfo(config.BasePath + fileName); 
         }
 
-        public T GetEntity<T>()
+        public async Task<T> GetEntity<T>()
         {
             T result = default(T);
             string typeName = typeof(T).FullName;
 
             using (StreamReader reader = File.OpenText())
             {
-                result = JsonConvert.DeserializeObject<T>(reader.ReadToEnd());
+                var resultString = await reader.ReadToEndAsync();
+                result = JsonConvert.DeserializeObject<T>(resultString);
             }
             return result;
         }

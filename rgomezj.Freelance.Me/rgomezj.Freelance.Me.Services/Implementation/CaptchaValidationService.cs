@@ -27,7 +27,7 @@ namespace rgomezj.Freelance.Me.Services.Implementation
             return _captchaSettings;
         }
 
-        public bool IsValidCaptcha(string secret, string response)
+        public async Task<bool> IsValidCaptcha(string secret, string response)
         {
             bool validCaptcha = false;
             HttpClient client = new HttpClient();
@@ -39,7 +39,7 @@ namespace rgomezj.Freelance.Me.Services.Implementation
 
             using (HttpResponseMessage captchaHttpResponse = client.PostAsync(this._captchaSettings.URLVerification, content).Result)
             {
-                string responseString = captchaHttpResponse.Content.ReadAsStringAsync().Result;
+                string responseString = await captchaHttpResponse.Content.ReadAsStringAsync();
                 CaptchaResponse captchaReponse = JsonConvert.DeserializeObject<CaptchaResponse>(responseString);
                 validCaptcha = captchaReponse.success;
             }

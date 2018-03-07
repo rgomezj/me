@@ -44,34 +44,41 @@ namespace rgomezj.Freelance.Me.UI.Pages
             this._captchaValidationService = captchaValidationService;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-            GeneralInfo = _generalInfoRepository.Get();
-            Skills = _skillRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Skill>();
-            Companies = _companyRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Company>();
-            References = _referenceRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Reference>();
-            Technologies = _technologyRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Technology>();
-            Aptitudes = _aptitudeRepository.GetAll().OrderBy(c => c.SortOrder).ToList<Aptitude>();
+            GeneralInfo = await _generalInfoRepository.Get();
+            Skills = await _skillRepository.GetAll();
+            Skills = Skills.OrderBy(c => c.SortOrder).ToList<Skill>();
+            Companies = await _companyRepository.GetAll();
+            Companies = Companies.OrderBy(c => c.SortOrder).ToList<Company>();
+            References = await _referenceRepository.GetAll();
+            References.OrderBy(c => c.SortOrder).ToList<Reference>();
+            Technologies = await _technologyRepository.GetAll();
+            Technologies = Technologies.OrderBy(c => c.SortOrder).ToList<Technology>();
+            Aptitudes = await _aptitudeRepository.GetAll();
+            Aptitudes = Aptitudes.OrderBy(c => c.SortOrder).ToList<Aptitude>();
         }
 
         [ValidateAntiForgeryToken]
-        public ActionResult OnPost(EmailMessage emailMessage)
+        public async Task<ActionResult> OnPost(EmailMessage emailMessage)
         {
             string errorMessage = string.Empty;
             bool success = true;
-            GeneralInfo generalInfo = _generalInfoRepository.Get();
+            GeneralInfo generalInfo = await _generalInfoRepository.Get();
             CaptchaSettings captchaSettings = _captchaValidationService.GetSettings();
             string captchaResponse = Request.Form[captchaSettings.CaptchaResponseKey];
             string name = System.Net.WebUtility.HtmlEncode(emailMessage.FromName);
 
-            if (_captchaValidationService.IsValidCaptcha(captchaSettings.SecretKey, captchaResponse))
+            var validationResult = await _captchaValidationService.IsValidCaptcha(captchaSettings.SecretKey, captchaResponse);
+
+            if (validationResult)
             {
                 emailMessage.To = generalInfo.EmailAddress;
                 emailMessage.ToName = generalInfo.Name;
                 emailMessage.Message = emailMessage.Message + Environment.NewLine + emailMessage.FromName + Environment.NewLine + emailMessage.From;
                 try
                 {
-                    _emailService.SendEmail(emailMessage);
+                    await _emailService.SendEmail(emailMessage);
                 }
                 catch
                 {

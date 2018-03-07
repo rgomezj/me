@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace rgomezj.Freelance.Me.Data.Implementation.JSON
 {
@@ -15,9 +16,9 @@ namespace rgomezj.Freelance.Me.Data.Implementation.JSON
         {
         }
 
-        public GeneralInfo Get()
+        public async Task<GeneralInfo> Get()
         {
-            GeneralInfo generalInfo = this.GetEntity<GeneralInfo>();
+            GeneralInfo generalInfo = await this.GetEntity<GeneralInfo>();
             return generalInfo;
         }
     }
